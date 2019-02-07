@@ -30,13 +30,14 @@ $('#datatable').DataTable();
 <table id="datatable"  class="table table-striped table-bordered table-hover table-condensed">
 <thead>
     <tr class="info" width=100>
-		<th align=center>Nama Program </th>
+		<th align=center>Nama Program</th>
 		<th align=center>Nama lengkap</th>
 		<th align=center>Nama Panggilan</th>
 		<th align=center>No Identitas</th>
 		<th align=center>Tempat, Tanggal lahir</th>
 		<th align=center>Usia</th>
 		<th align=center>Jenis Kelamin</th>
+		<th align=center>Status </th>
 		<th align=center>Alamat</th>
 		<th align=center>Kabupaten</th>
 		<th align=center>Provinsi</th>
@@ -72,8 +73,8 @@ while($b = mysql_fetch_array($a))
                 <td> $b[jenis_kelamin]</td>
                 <td> $b[status_pernikahan]</td>
                 <td> $b[alamat]</td>
-                <td> $b[provinsi]</td>
                 <td> $b[kabupaten]</td>
+                <td> $b[provinsi]</td>
                 <td> $b[no_hp]</td>
                 <td> $b[email]</td>
                 <td> $b[fb]</td>
