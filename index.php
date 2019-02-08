@@ -9,8 +9,8 @@
 <form name=form_registrasi method=post action=print_form.php enctype="multipart/form-data">
  <div class='container' >
        <div class='panel panel-info'>
-        <div class='panel-heading'><center><label>FORMULIR PENDAFTARAN PESERTA KARANTINA TAHFIDZH AL-QUR'AN NASIONAL </label></center></div>
-        <div class='panel-heading'><center><label>  </label></center></div>
+        <div class='panel-heading'><center><label>SISTEM INFORMASI PENDAFTARAN PESERTA KARANTINA
+		TAHFIDZH AL-QUR'AN NASIONAL </label></center></div>
        
         <div class='panel-heading'><center><label>  </label></center></div>
        

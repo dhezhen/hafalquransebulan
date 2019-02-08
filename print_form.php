@@ -18,9 +18,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/DataTables/media/css/dataTables.bootstrap.min.css">
              
 <Script>
-function cetak() {
-window.print();}
-
 function warning(){
 		alert("Silahkan Cetak Formulir, Klik Tombol Print Di Bawah");
 		}
@@ -35,6 +32,11 @@ function hide(){
 		alert("ya");}
 		
 		}
+</script>
+<script>
+function cetak(){
+window.print();
+}
 </script>
 <style>
 #box1{
@@ -306,7 +308,7 @@ Kuningan,  <?php echo tgl_indo(date("Y-m-d")); ?>
 	Ceklis Persyaratan Yang Sudah Dilengkapi
 	</li>
 	<li>
-	Bawalah Formulir dan Surat Pernyataan Yang Telah Anda Cetak Beserta Persyaratan Lainya Saat Registrasi Ulang
+	Bawalah Formulir dan Surat Pernyataan Yang Telah Anda Cetak Beserta Persyaratan Lainnya Saat Registrasi Ulang
 	</li>
 </ol>
 </font>
@@ -352,8 +354,7 @@ Kuningan,  <?php echo tgl_indo(date("Y-m-d")); ?>
 <input type=hidden name="barang_wakaf" value="<?php echo$barang_wakaf?>"> 
 <center>
 potong disini-----------------------------------------------------
-<!-- <td> <button type="submit" name="simpan" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-send"></span> Kirim Formulir</button></a> -->
-<td> <button name="simpan" onClick="cetak()"  class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-print" ></span> Print </button></a>
+<td> <button name="simpan" onClick="cetak()"  class="btn btn-success btn-sm" ><span class="glyphicon glyphicon-print" ></span> Print </button>
 -----------------------------------------------------potong disini
 
 
@@ -364,7 +365,7 @@ potong disini-----------------------------------------------------
 
 
 <center>FORM SERAGAM<br>
-Yayasan Karantina Tahfidzh Al-Quran Nasional<br>
+Yayasan Karantina Tahfizh Al-Quran Nasional<br>
 Angkatan : <?php echo $angkatan; ?></center>
 <table border="0" width=80%>
 <tr>
@@ -468,7 +469,7 @@ Saya yang bertanda tangan dibawah ini :
 <tr>
 	<td width=20%>Pelaksanaan <br> </td>
 	<td width=1%>:</td>
-	<td width=45%><?php echo "---" ?></td>
+	<td width=45%><?php echo $pelaksanaan ?></td>
 </tr>
 
 <tr>
