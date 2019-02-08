@@ -59,13 +59,14 @@ body {
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="menu.php?page=tampil_data">Data Peserta karantina</a>
   <a href="menu.php?page=penilaian">Penilian </a>
+  <a href="menu.php?page=hasil_penilaian">Hasil Penilaian</a>
   <a href="#">Data Alumni</a>
 </div>
 	
 <div id="main">
    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu Utama</span>
 
-   <?php
+<?php
 		if (isset($_GET['page'])){
 			$page = $_GET['page'];
 				
@@ -75,6 +76,9 @@ body {
 						break;
 					case 'penilaian':
 						include 'penilaian.php';
+						break;
+					case 'hasil_penilaian':
+						include 'hasil_penilaian.php';
 						break;
 					default :
 						include "home.php";

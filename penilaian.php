@@ -46,7 +46,7 @@ $('#datatable').DataTable();
 		<th align=center>Kabupaten</th>
 		<th align=center>Provinsi</th>
 		<th align=center>Hafalan</th>
-		<th align=center><a href='home.php?m=ia'><button type='button' class='btn btn-primary btn-sm'><span class='glyphicon glyphicon-plus'></span> Tambah Admin </button></a></th>
+		<th align=center><a href='home.php?m=ia'><button type='button' class='btn btn-primary btn-sm'><span class='glyphicon glyphicon-plus'></span> Tambah Peserta </button></a></th>
    
    </tr>
 </thead>
@@ -69,8 +69,7 @@ while($b = mysql_fetch_array($a))
                 <td> $b[data_hafalan]</td>
               
                
-				<td><a href='home.php?m=ea&id=$b[id_peserta]'><button type='button' class='btn btn-success btn-sm'><span class='glyphicon glyphicon-edit'></span> Edit</button></a>
-				<a href='home.php?m=ha&id=$b[id_peserta]'><button type='button' class='btn btn-danger btn-sm'><span class='glyphicon glyphicon-trash'></span> Hapus</button></a>
+				<td><a href='home.php?m=ea&id=$b[id_peserta]'><button type='button' class='btn btn-success btn-sm'><span class='glyphicon glyphicon-edit'></span> Nilai </button></a>
 				</td>
           </tr>";
 }
@@ -79,54 +78,6 @@ while($b = mysql_fetch_array($a))
 </tbody>
 </table>
 
-
-<center>
-<br>
-	<b>	
-		Data hasil Penilaian Tahsin / Tahfizh 
-	</b>
-	<br>
-	<br>
-</center>
-<table id="datatable"  class="table table-striped table-bordered table-hover table-condensed">
-<thead>
-    <tr class="info" width=100>
-		<th align=center>Nama Program</th>
-		<th align=center>Nama lengkap</th>
-		<th align=center>Usia</th>
-		<th align=center>Jenis Kelamin</th>
-		<th align=center>Hafalan</th>
-		<th align=center>Nilai</th>
-   
-   </tr>
-</thead>
-<tbody>
-
-
-<?php
-
-include "koneksi.php";
-$query = "select * from form_registrasi order by nilai_tahsin asc" ;
-$c = mysql_query($query);
-while($d = mysql_fetch_array($c))
-{
-    echo "<tr>
-			    <td> $d[nama_program] </td>
-                <td> $d[nama_lengkap] </td>           
-                <td> $d[usia] </td>
-                <td> $d[jenis_kelamin]</td>               
-                <td> $d[data_hafalan]</td>
-                <td> $d[nilai_tahsin]</td>
-
-              
-               
-				</td>
-          </tr>";
-}
-
-echo die(mysql_error());
-?>
-</table>
 </div>
 </body>
 </html>
